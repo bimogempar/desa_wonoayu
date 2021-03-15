@@ -1,0 +1,39 @@
+@extends('layouts.app')
+@section('title', 'Beranda')
+
+@include('layouts.navigation')
+
+@section('content')
+<div class="container">
+    <div class="row py-5 px-5">
+        <h1>Selamat datang di Desa Wonoayu</h1>
+    </div>
+
+    <div class="row py-3 px-5">
+        <h4>Portal Berita</h4>
+    </div>
+
+    <div class="row px-4 px-0">
+        @foreach($posts as $post)
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <!-- <img src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                    <h3 class="card-title">{{ $post->title }}</h3>
+                    <p class="card-text">{!! Str::limit($post->body, 100) !!}</p>
+                    <a href="/posts/{{ $post->slug }}" style="font-style: italic;">Read More</a>
+                </div>
+                <div class="card-footer pb-0">
+                    <p style="font-size: 10pt;">Publish pada {{ $post->created_at->format("d M y") }}</p>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
+
+    <div class="row px-5 d-flex justify-content-center">
+        {{ $posts->links() }}
+    </div>
+
+</div>
+@endsection
