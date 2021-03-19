@@ -17,7 +17,9 @@
         @foreach($posts as $post)
         <div class="col-md-4">
             <div class="card mb-4">
-                <!-- <img src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" class="card-img-top" alt="..."> -->
+                @if ($post->thumbnail)
+                <img style="height: 275px; object-fit: cover; object-position: center;" src="{{ $post->takeImage }}" class="card-img-top">
+                @endif
                 <div class="card-body">
                     <h3 class="card-title">{{ $post->title }}</h3>
                     <p class="card-text">{!! Str::limit($post->body, 100) !!}</p>

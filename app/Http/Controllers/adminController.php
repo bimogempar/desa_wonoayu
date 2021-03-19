@@ -25,16 +25,22 @@ class adminController extends Controller
         return view('posts.create');
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        //validate the field
         $attr = request()->validate([
             'title' => 'required|min:3',
             'body' => 'required',
+            'thumbnail' => 'image|mimes:jpeg,png,jpg,svg|max:2048'
         ]);
 
-        //assign title to the slug
-        $attr['slug'] = \Str::slug(request('title'));
+        $attr = $request->all();
+
+        $slug = \Str::slug(request('title'));
+        $attr['slug'] = $slug;
+
+        $thumbnail = request()->file('thumbnail') ? request()->file('thumbnail')->store("images/posts") : null;
+
+        $attr['thumbnail'] = $thumbnail;
 
         //create new post
         Post::create($attr);
@@ -49,13 +55,23 @@ class adminController extends Controller
         return view('posts.edit', compact('post'));
     }
 
-    public function update(Post $post)
+    public function update(Post $post, Request $request)
     {
         //validate the field
         $attr = request()->validate([
             'title' => 'required|min:3',
             'body' => 'required',
+            'thumbnail' => 'image|mimes:jpeg,png,jpg,svg|max:2048'
         ]);
+
+        if (request()->file('thumbnail')) {
+            \Storage::delete($post->thumbnail);
+            $thumbnail = request()->file('thumbnail')->store("images/posts");
+        } else {
+            $thumbnail = $post->thumbnail;
+        }
+
+        $attr['thumbnail'] = $thumbnail;
 
         $post->update($attr);
 
@@ -66,6 +82,7 @@ class adminController extends Controller
 
     public function destroy(Post $post)
     {
+        \Storage::delete($post->thumbnail);
         $post->delete();
         session()->flash('success', 'The post was deleted');
         return redirect('admin');

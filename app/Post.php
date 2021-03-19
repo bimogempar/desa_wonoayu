@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $fillable = ['title', 'slug', 'body',];
+    protected $fillable = ['title', 'slug', 'body', 'thumbnail'];
     // if this blog your mine, use it
     // protected $guarded = [];
 
@@ -19,5 +19,10 @@ class Post extends Model
     public function scopeLatestPost()
     {
         return $this->latest()->get();
+    }
+
+    public function getTakeImageAttribute()
+    {
+        return "/storage/" . $this->thumbnail;
     }
 }

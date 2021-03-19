@@ -5,13 +5,23 @@
 @section('content')
 <div class="container px-5">
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">Berita Baru</div>
                 <div class="card-body">
-                    <form action="edit" method="post">
+                    <form action="edit" method="post" enctype="multipart/form-data">
                         @method('patch')
                         @csrf
+                        <div class="form-group">
+                            <label for="">Thumbnail</label><br>
+                            <input type="file" name="thumbnail" id="thumbnail">
+                        </div>
+                        @error('thumbnail')
+                        <div class="text-danger mt-2">
+                            Thumbnail harus jpeg, png, jpg, svg
+                        </div>
+                        @enderror
+
                         <div action="form-group">
                             <label for="title">Judul</label>
                             <input value="{{ old('title') ?? $post->title }}" type="text" name="title" id="title" class="form-control">

@@ -52,36 +52,13 @@
                     <td>{{ $post->title }}</td>
                     <td>{{ $post->created_at->format('d M y | h:i:s') }}</td>
                     <td>
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Apakah anda yakin ingin menghapus?</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div>
-                                            <div>Judul : {{ $post->title }}</div>
-                                            <div>Published : {{ $post->created_at->format('d M y | h:i:s') }}</div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-success" data-dismiss="modal">Tidak</button>
-                                        <form action="posts/{{ $post->slug }}/delete" method="post">
-                                            @csrf
-                                            @method("delete")
-                                            <button class="btn btn-danger" type="submit">Ya</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <a style="color: white;" target="_blank" href="posts/{{ $post->slug }}" class="btn btn-info">Show</a>
                         <a href="posts/{{ $post->slug }}/edit" class="btn btn-success ml-3">Edit</a>
-                        <button type="button" class="btn btn-danger ml-3" data-toggle="modal" data-target="#exampleModal">Delete</button>
+                        <form class="d-inline ml-3" action="posts/{{ $post->slug }}/delete" method="post" onsubmit="return confirm('Yakin hapus dengan judul post {{$post->title}} ?')">
+                                            @csrf
+                                            @method("delete")
+                                            <button class="btn btn-danger" type="submit">Hapus</button>
+                        </form>
                     </td>
                 </tr>
                 @endforeach

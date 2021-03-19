@@ -9,8 +9,19 @@
             <div class="card">
                 <div class="card-header">Berita Baru</div>
                 <div class="card-body">
-                    <form action="store" method="POST">
+                    <form action="store" method="POST" enctype="multipart/form-data">
                         @csrf
+                        <div class="form-group">
+                            <label for="">Thumbnail</label><br>
+                            <input type="file" name="thumbnail" id="thumbnail">
+                        </div>
+                        @error('thumbnail')
+                        <div class="text-danger mt-2">
+                            Thumbnail harus jpeg, png, jpg, svg
+                        </div>
+                        @enderror
+
+
                         <div action="form-group">
                             <label for="title">Judul</label>
                             <input type="text" name="title" id="title" class="form-control">
