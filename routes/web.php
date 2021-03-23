@@ -23,6 +23,7 @@ Route::get('posts/{post:slug}', 'PostController@show');
 
 Route::view('layanan', 'layanan');
 Route::view('tentangkami', 'tentangkami');
+Route::view('try', 'try');
 
 Route::get(
     '/logout',
