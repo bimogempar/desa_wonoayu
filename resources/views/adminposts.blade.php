@@ -4,12 +4,13 @@
 @section('content')
 <div class="container">
     <div class="row px-5 pt-5">
-        <h3>Halaman Admin</h3>
+        <h3>Halaman Berita Admin</h3>
     </div>
 
     <div class="row px-5">
         <div class="d-grid gap-5 d-md-block">
-            <a href=""><button class="btn btn-warning" type="button">Berita</button></a>
+            <a href="posts"><button class="btn btn-warning" type="button">Berita</button></a>
+            <a href="sliders"><button class="btn btn-warning" type="button">Slider</button></a>
             <a href=""><button class="btn btn-warning" type="button">Print</button></a>
         </div>
     </div>
@@ -52,12 +53,12 @@
                     <td>{{ $post->title }}</td>
                     <td>{{ $post->created_at->format('d M y | h:i:s') }}</td>
                     <td>
-                        <a style="color: white;" target="_blank" href="posts/{{ $post->slug }}" class="btn btn-info">Show</a>
+                        <a style="color: white;" target="_blank" href="{{ route('showpost', $post->slug) }}" class="btn btn-info">Show</a>
                         <a href="posts/{{ $post->slug }}/edit" class="btn btn-success ml-3">Edit</a>
                         <form class="d-inline ml-3" action="posts/{{ $post->slug }}/delete" method="post" onsubmit="return confirm('Yakin hapus dengan judul post {{$post->title}} ?')">
-                                            @csrf
-                                            @method("delete")
-                                            <button class="btn btn-danger" type="submit">Hapus</button>
+                        @csrf
+                        @method("delete")
+                        <button class="btn btn-danger" type="submit">Hapus</button>
                         </form>
                     </td>
                 </tr>

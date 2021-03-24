@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Post;
 use Dotenv\Result\Success;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\Types\Boolean;
 
 class adminController extends Controller
 {
@@ -13,9 +14,14 @@ class adminController extends Controller
     //     $this->middleware('auth');
     // }
 
+    public function pengalihanAdmin()
+    {
+        return redirect('admin/posts');
+    }
+
     public function index()
     {
-        return view('admin', [
+        return view('adminposts', [
             'posts' => Post::latest()->paginate(15),
         ]);
     }
@@ -30,7 +36,7 @@ class adminController extends Controller
         $attr = request()->validate([
             'title' => 'required|min:3',
             'body' => 'required',
-            'thumbnail' => 'image|mimes:jpeg,png,jpg,svg|max:2048'
+            'thumbnail' => 'image|mimes:jpeg,png,jpg,svg|max:2048',
         ]);
 
         $attr = $request->all();
@@ -55,7 +61,7 @@ class adminController extends Controller
         return view('posts.edit', compact('post'));
     }
 
-    public function update(Post $post, Request $request)
+    public function update(Post $post)
     {
         //validate the field
         $attr = request()->validate([

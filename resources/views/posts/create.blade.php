@@ -33,8 +33,6 @@
                         @enderror
 
                         <div action="form-group">
-                            <!-- <label for="title">Isi Berita</label>
-                            <textarea name="body" id="body" class="form-control"></textarea> -->
                             <label for="title">Isi Berita</label>
                             <textarea name="body" id="body" class="form-control"></textarea>
                         </div>

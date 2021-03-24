@@ -11,15 +11,11 @@
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-100" src="http://via.placeholder.com/350x234" alt="First slide">
+        @foreach ($sliders as $slider)
+        <div class="carousel-item @if($loop->first) active @endif">
+            <img class="d-block w-100" src="{{ $slider->takeImage }}/{{ $slider->imageslider }}" alt="">
         </div>
-        <div class="carousel-item">
-        <img class="d-block w-100" src="http://via.placeholder.com/350x234" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-        <img class="d-block w-100" src="http://via.placeholder.com/350x234" alt="Third slide">
-        </div>
+        @endforeach
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

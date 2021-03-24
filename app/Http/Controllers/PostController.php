@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Slider;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -15,6 +16,7 @@ class PostController extends Controller
     public function index()
     {
         return view('welcome', [
+            'sliders' => Slider::where('status', 1)->get(),
             'posts' => Post::latest()->simplepaginate(9),
         ]);
     }
