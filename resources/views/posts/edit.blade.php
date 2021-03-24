@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-header">Berita Baru</div>
                 <div class="card-body">
-                    <form action="edit" method="post" enctype="multipart/form-data">
+                    <form action="update" method="post" enctype="multipart/form-data">
                         @method('patch')
                         @csrf
                         <div class="form-group">

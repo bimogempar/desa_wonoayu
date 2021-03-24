@@ -53,7 +53,7 @@
                     <th scope="row">{{ $slider->id }}</th>
                     <td>{{ $slider->title }}</td>
                     <td><img src="{{ $slider->takeImage }}/{{ $slider->imageslider }}" style="width: 120;"></td>
-                    <td>{{ $slider->status }}</td>
+                    <td>{{ $slider->status == 0 ? 'Tidak Aktif' : 'Aktif'}}</td>
                     <td>
                         <a href="sliders/{{ $slider->id }}/edit" class="btn btn-success">Edit</a>
                         <form class="d-inline ml-3" action="sliders/{{ $slider->id }}/delete" method="post" onsubmit="return confirm('Yakin hapus {{$slider->title}} ?')">

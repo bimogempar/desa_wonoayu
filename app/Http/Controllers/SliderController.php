@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class SliderController extends Controller
 {
+
+    public function showPublic()
+    {
+        return view('try', [
+            'sliders' => Slider::where('status', 1)->get(),
+        ]);
+    }
+
     public function index()
     {
         return view('adminslider', [
@@ -47,7 +55,7 @@ class SliderController extends Controller
     public function update(Slider $slider)
     {
         $attr = request()->validate([
-            'imageslider' => 'required|image|mimes:jpeg,png,jpg,svg|max:2048',
+            'imageslider' => 'image|mimes:jpeg,png,jpg,svg|max:2048',
         ]);
 
         if (request()->file('imageslider')) {
@@ -58,6 +66,9 @@ class SliderController extends Controller
         }
 
         $attr['imageslider'] = $imageslider;
+
+        $status = request('status');
+        $attr['status'] = $status;
 
         $slider->update($attr);
 

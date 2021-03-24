@@ -71,33 +71,16 @@
     <main id="main">
         {{-- Carousel --}}
         <div id="carousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel" data-slide-to="1"></li>
-                <li data-target="#carousel" data-slide-to="2"></li>
-            </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                <img src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="...">
+                @foreach ($sliders as $slider)
+                <div class="carousel-item @if($loop->first) active @endif">
+                <a href="{{ $slider->link }}" target="_blank" rel="noopener noreferrer"><img src="{{ $slider->takeImage }}/{{ $slider->imageslider }}" class="d-block w-100" alt="..."></a>
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5>{{ $slider->title }}</h5>
+                    <p>{{ $slider->subtitle }}</p>
                 </div>
                 </div>
-                <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1616093477953-6bedb730ef5d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
-                </div>
-                <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1616141893496-fbc65370493e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                </div>
-                </div>
+                @endforeach
             </div>
             <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

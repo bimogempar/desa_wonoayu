@@ -31,7 +31,6 @@
                             <label for="">Slider</label><br>
                             <input type="file" name="imageslider" id="imageslider">
                         </div>
-
                         @error('imageslider')
                         <div class="text-danger mt-2">
                             Slider harus di isi dan berformat jpeg, png, jpg, svg
@@ -40,9 +39,9 @@
 
                         <div action="form-group">
                             <label for="title">Status</label>
-                            <select name="status" id="status">
-                                <option value="1">Aktif</option>
-                                <option value="0">Tidak Aktif</option>
+                            <select class="form-control" name="status" id="status">
+                                <option value="1" {{ old('status',$slider->status)== 0 ? 'selected' : '' }}>Aktif</option>
+                                <option value="0" {{ old('status',$slider->status)== 0 ? 'selected' : '' }}>Tidak Aktif</option>
                             </select>
                         </div>
 

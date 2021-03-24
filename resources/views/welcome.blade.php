@@ -13,7 +13,7 @@
     <div class="carousel-inner">
         @foreach ($sliders as $slider)
         <div class="carousel-item @if($loop->first) active @endif">
-            <img class="d-block w-100" src="{{ $slider->takeImage }}/{{ $slider->imageslider }}" alt="">
+            <a href="{{ $slider->link }}" target="_blank" rel="noopener noreferrer"><img class="d-block w-100" src="{{ $slider->takeImage }}/{{ $slider->imageslider }}" alt=""></a>
         </div>
         @endforeach
     </div>
