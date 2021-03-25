@@ -7,17 +7,9 @@ use Illuminate\Http\Request;
 
 class SliderController extends Controller
 {
-
-    public function showPublic()
-    {
-        return view('try', [
-            'sliders' => Slider::where('status', 1)->get(),
-        ]);
-    }
-
     public function index()
     {
-        return view('adminslider', [
+        return view('sliders.adminsliders', [
             'sliders' => Slider::latest()->paginate(15),
         ]);
     }
@@ -30,7 +22,7 @@ class SliderController extends Controller
     public function store(Request $request)
     {
         $attr = request()->validate([
-            'imageslider' => 'required|image|mimes:jpeg,png,jpg,svg|max:2048',
+            'imageslider' => 'required|image|mimes:jpeg,png,jpg,svg',
         ]);
 
         $attr = $request->all();
@@ -43,36 +35,6 @@ class SliderController extends Controller
         Slider::create($attr);
 
         session()->flash('success', 'Slider berhasil di upload');
-
-        return redirect('admin/sliders');
-    }
-
-    public function edit(Slider $slider)
-    {
-        return view('sliders.edit', compact('slider'));
-    }
-
-    public function update(Slider $slider)
-    {
-        $attr = request()->validate([
-            'imageslider' => 'image|mimes:jpeg,png,jpg,svg|max:2048',
-        ]);
-
-        if (request()->file('imageslider')) {
-            \Storage::delete($slider->imageslider);
-            $imageslider = request()->file('imageslider')->store("images/sliders");
-        } else {
-            $imageslider = $slider->imageslider;
-        }
-
-        $attr['imageslider'] = $imageslider;
-
-        $status = request('status');
-        $attr['status'] = $status;
-
-        $slider->update($attr);
-
-        session()->flash('success', 'Slider berhasil di edit');
 
         return redirect('admin/sliders');
     }

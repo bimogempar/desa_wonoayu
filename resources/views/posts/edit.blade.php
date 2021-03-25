@@ -1,15 +1,13 @@
-@extends('layouts.app')
-@section('title','Update Berita')
-@include('layouts.navigation')
+@extends('layouts.adminapp')
 
 @section('content')
-<div class="container px-5">
+<div class="container px-5 mt-5">
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">Berita Baru</div>
                 <div class="card-body">
-                    <form action="update" method="post" enctype="multipart/form-data">
+                    <form action="edit" method="post" enctype="multipart/form-data">
                         @method('patch')
                         @csrf
                         <div class="form-group">
@@ -53,3 +51,4 @@
     </div>
 </div>
 @endsection
+

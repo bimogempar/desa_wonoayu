@@ -15,16 +15,15 @@ use Illuminate\Http\Client\Request;
 |
 */
 
-
+// Example
 // Route::view('/', 'welcome');
-
-Route::get('/', 'PostController@index');
 Route::get('posts/{post:slug}', 'PostController@show')->name('showpost');
-
-Route::view('layanan', 'layanan');
-Route::view('tentangkami', 'tentangkami');
 Route::get('try', 'sliderController@showPublic');
 
+// Public
+Route::get('/', 'PublishController@index');
+
+// Error
 Route::get(
     '/logout',
     function () {
@@ -38,12 +37,14 @@ Route::get(
     }
 );
 
+// Admin
 Route::middleware('auth')->group(function () {
 
+    // Throw Admin
     Route::get('admin', 'adminController@pengalihanAdmin');
     //post
     Route::get('admin/posts', 'adminController@index')->name('admin.posts');
-    Route::get('admin/posts/create', 'adminController@create')->name('create');
+    Route::get('admin/posts/create', 'adminController@create')->name('create.post');
     Route::post('admin/posts/store', 'adminController@store');
     //update post
     Route::get('admin/posts/{post:slug}/edit', 'adminController@edit');
@@ -53,15 +54,23 @@ Route::middleware('auth')->group(function () {
 
     //slider
     Route::get('admin/sliders', 'sliderController@index');
-    Route::get('admin/sliders/create', 'sliderController@create');
+    Route::get('admin/sliders/create', 'sliderController@create')->name('create.slider');
     Route::post('admin/sliders/store', 'sliderController@store');
     //update slider
     Route::get('admin/sliders/{slider:id}/edit', 'sliderController@edit');
     Route::patch('admin/sliders/{slider:id}/update', 'sliderController@update');
     //delete post
     Route::delete('admin/sliders/{slider:id}/delete', 'sliderController@destroy');
+
+    // statistic
+    Route::get('admin/statistics', 'statisticController@index');
+    // Edit Statistic
+    Route::get('admin/statistics/{statistic:id}/edit', 'statisticController@edit')->name('edit.statistic');
+    Route::patch('admin/statistics/{statistic:id}/update', 'statisticController@update');
 });
 
+
+// Disable Register
 Auth::routes([
     'register' => false,
     'reset' => false,

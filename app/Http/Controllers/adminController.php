@@ -21,7 +21,7 @@ class adminController extends Controller
 
     public function index()
     {
-        return view('adminposts', [
+        return view('posts.adminposts', [
             'posts' => Post::latest()->paginate(15),
         ]);
     }

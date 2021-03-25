@@ -1,9 +1,7 @@
-@extends('layouts.app')
-@section('title','Buat Berita')
-@include('layouts.navigation')
+@extends('layouts.adminapp')
 
 @section('content')
-<div class="container px-5">
+<div class="container px-5 mt-5">
     <div class="row">
         <div class="col-sm-12">
             <div class="card">

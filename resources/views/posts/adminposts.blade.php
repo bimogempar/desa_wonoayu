@@ -1,36 +1,12 @@
-@extends('layouts.app')
-@section('title','Admin')
-@include('layouts.navigation')
+@extends('layouts.adminapp')
+@section('title','Admin Berita')
 @section('content')
-<div class="container">
-    <div class="row px-5 pt-5">
-        <h3>Halaman Berita Admin</h3>
-    </div>
+    @section('title.app','Berita')
+    @include('component.navadmin')
 
     <div class="row px-5">
-        <div class="d-grid gap-5 d-md-block">
-            <a href="posts"><button class="btn btn-warning" type="button">Berita</button></a>
-            <a href="sliders"><button class="btn btn-warning" type="button">Slider</button></a>
-            <a href=""><button class="btn btn-warning" type="button">Print</button></a>
-        </div>
+        <a href="{{ route('create.post') }}" class="btn btn-primary">Buat Berita</a>
     </div>
-
-    <div class="row px-5 pb-5">
-        <div class="py-3 d-flex justify-content-center">
-            <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-            </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
-        </div>
-    </div>
-
-    <div class="row px-5">
-        <a href="{{ route('create') }}" class="btn btn-primary">Buat Berita</a>
-    </div>
-
-    @include('alert')
 
     <div class="row px-5 pt-5">
         <h3>Daftar Berita</h3>
@@ -70,5 +46,4 @@
     <div class="row px-5 d-flex justify-content-center">
         {{ $posts->links() }}
     </div>
-</div>
 @endsection
