@@ -32,7 +32,7 @@ class StatisticController extends Controller
 
         $statistic->update($attr);
 
-        session()->flash('success', 'Berita berhasil di edit');
+        session()->flash('success', 'Statistik berhasil di edit');
 
         return redirect('admin/statistics');
     }

@@ -3,13 +3,10 @@
 @section('content')
     @section('title.app','Statistik')
     @include('component.navadmin')
-
-    {{-- <div class="row px-5">
-        <a href="{{ route('edit.statistic') }}" class="btn btn-primary">Buat Statistik</a>
-    </div> --}}
+    @include('component.alert')
 
     <div class="row px-5 pt-5">
-        <h3>Daftar Berita</h3>
+        <h3>Daftar Statistic</h3>
     </div>
 
     <div class="row px-5 pt-3">

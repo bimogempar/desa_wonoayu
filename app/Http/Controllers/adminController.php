@@ -53,7 +53,7 @@ class adminController extends Controller
 
         session()->flash('success', 'Berita berhasil di upload');
 
-        return redirect('admin');
+        return redirect('admin/posts');
     }
 
     public function edit(Post $post)
@@ -81,16 +81,16 @@ class adminController extends Controller
 
         $post->update($attr);
 
-        session()->flash('success', 'Berita berhasil di edit');
+        session()->flash('success', 'Berita berhasil diedit');
 
-        return redirect('admin');
+        return redirect('admin/posts');
     }
 
     public function destroy(Post $post)
     {
         \Storage::delete($post->thumbnail);
         $post->delete();
-        session()->flash('success', 'The post was deleted');
-        return redirect('admin');
+        session()->flash('success', 'Berita berhasil dihapus');
+        return redirect('admin/posts');
     }
 }

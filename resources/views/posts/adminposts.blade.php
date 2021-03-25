@@ -3,6 +3,7 @@
 @section('content')
     @section('title.app','Berita')
     @include('component.navadmin')
+    @include('component.alert')
 
     <div class="row px-5">
         <a href="{{ route('create.post') }}" class="btn btn-primary">Buat Berita</a>

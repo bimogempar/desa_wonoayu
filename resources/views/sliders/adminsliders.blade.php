@@ -3,6 +3,7 @@
 @section('content')
     @section('title.app','Sliders')
     @include('component.navadmin')
+    @include('component.alert')
 
     <div class="row px-5">
         <a href="{{ route('create.slider') }}" class="btn btn-primary">Buat Slider</a>

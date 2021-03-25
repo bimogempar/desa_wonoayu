@@ -43,7 +43,7 @@ class SliderController extends Controller
     {
         \Storage::delete($slider->imageslider);
         $slider->delete();
-        session()->flash('success', 'The post was deleted');
+        session()->flash('success', 'Slider berhasil di hapus');
         return redirect('admin/sliders');
     }
 }

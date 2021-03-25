@@ -26,8 +26,6 @@
 <body>
     <div class="container">
 
-        @include('component.alert')
-
         @yield('content')
 
     </div>
