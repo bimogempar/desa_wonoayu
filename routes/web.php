@@ -16,12 +16,12 @@ use Illuminate\Http\Client\Request;
 */
 
 // Example
-// Route::view('/', 'welcome');
-Route::get('posts/{post:slug}', 'PostController@show')->name('showpost');
-Route::get('try', 'sliderController@showPublic');
+// Route::view('/show', 'posts.show');
+// Route::get('posts/{post:slug}', 'PostController@show')->name('showpost');
+// Route::view('cobcss', 'cobcss');
 
 // Public
-Route::get('/', 'PublishController@index');
+Route::get('/', 'adminController@index');
 
 // Error
 Route::get(
@@ -41,16 +41,16 @@ Route::get(
 Route::middleware('auth')->group(function () {
 
     // Throw Admin
-    Route::get('admin', 'adminController@pengalihanAdmin');
+    Route::get('admin', 'adminController@throwAdmin');
     //post
-    Route::get('admin/posts', 'adminController@index')->name('admin.posts');
-    Route::get('admin/posts/create', 'adminController@create')->name('create.post');
-    Route::post('admin/posts/store', 'adminController@store');
+    Route::get('admin/posts', 'PostController@index')->name('admin.posts');
+    Route::get('admin/posts/create', 'PostController@create')->name('create.post');
+    Route::post('admin/posts/store', 'PostController@store');
     //update post
-    Route::get('admin/posts/{post:slug}/edit', 'adminController@edit');
-    Route::patch('admin/posts/{post:slug}/edit', 'adminController@update');
+    Route::get('admin/posts/{post:slug}/edit', 'PostController@edit')->name('edit.post');
+    Route::patch('admin/posts/{post:slug}/edit', 'PostController@update');
     //delete post
-    Route::delete('admin/posts/{post:slug}/delete', 'adminController@destroy');
+    Route::delete('admin/posts/{post:slug}/delete', 'PostController@destroy');
 
     //slider
     Route::get('admin/sliders', 'sliderController@index');

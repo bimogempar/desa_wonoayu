@@ -31,7 +31,7 @@
 
                 <div class="col-lg-5 col-md-6">
                     <div class="about-img">
-                    <img src="frontend/img/about-img.jpg" alt="">
+                    <img src="http://via.placeholder.com/463x686" alt="">
                     </div>
                 </div>
 
@@ -105,7 +105,7 @@
 
                 <div class="col-lg-3 col-md-6 wow fadeInUp">
                     <div class="member">
-                    <img src="frontend/img/team-1.jpg" class="img-fluid" alt="">
+                    <img src="http://via.placeholder.com/800x800" class="img-fluid" alt="">
                     <div class="member-info">
                         <div class="member-info-content">
                         <h4>Walter White</h4>
@@ -123,7 +123,7 @@
 
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="member">
-                    <img src="frontend/img/team-2.jpg" class="img-fluid" alt="">
+                    <img src="http://via.placeholder.com/800x800" class="img-fluid" alt="">
                     <div class="member-info">
                         <div class="member-info-content">
                         <h4>Sarah Jhonson</h4>
@@ -141,7 +141,7 @@
 
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="member">
-                    <img src="frontend/img/team-3.jpg" class="img-fluid" alt="">
+                    <img src="http://via.placeholder.com/800x800" class="img-fluid" alt="">
                     <div class="member-info">
                         <div class="member-info-content">
                         <h4>William Anderson</h4>
@@ -159,7 +159,7 @@
 
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="member">
-                    <img src="frontend/img/team-4.jpg" class="img-fluid" alt="">
+                    <img src="http://via.placeholder.com/800x800" class="img-fluid" alt="">
                     <div class="member-info">
                         <div class="member-info-content">
                         <h4>Amanda Jepson</h4>
@@ -194,7 +194,7 @@
                     <div class="owl-carousel testimonials-carousel wow fadeInUp">
 
                     <div class="testimonial-item">
-                        <img src="frontend/img/testimonial-1.jpg" class="testimonial-img" alt="">
+                        <img src="http://via.placeholder.com/800x800" class="testimonial-img" alt="">
                         <h3>Saul Goodman</h3>
                         <h4>Ceo &amp; Founder</h4>
                         <p>
@@ -203,7 +203,7 @@
                     </div>
 
                     <div class="testimonial-item">
-                        <img src="frontend/img/testimonial-2.jpg" class="testimonial-img" alt="">
+                        <img src="http://via.placeholder.com/800x800" class="testimonial-img" alt="">
                         <h3>Sara Wilsson</h3>
                         <h4>Designer</h4>
                         <p>
@@ -212,7 +212,7 @@
                     </div>
 
                     <div class="testimonial-item">
-                        <img src="frontend/img/testimonial-3.jpg" class="testimonial-img" alt="">
+                        <img src="http://via.placeholder.com/800x800" class="testimonial-img" alt="">
                         <h3>Jena Karlis</h3>
                         <h4>Store Owner</h4>
                         <p>
@@ -221,7 +221,7 @@
                     </div>
 
                     <div class="testimonial-item">
-                        <img src="frontend/img/testimonial-4.jpg" class="testimonial-img" alt="">
+                        <img src="http://via.placeholder.com/800x800" class="testimonial-img" alt="">
                         <h3>Matt Brandon</h3>
                         <h4>Freelancer</h4>
                         <p>

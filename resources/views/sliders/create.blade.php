@@ -1,4 +1,5 @@
 @extends('layouts.adminapp')
+@section('title','Buat Slider')
 
 @section('content')
 <div class="container px-5 mt-5">

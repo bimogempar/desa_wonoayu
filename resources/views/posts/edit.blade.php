@@ -1,4 +1,5 @@
 @extends('layouts.adminapp')
+@section('title','Edit Berita')
 
 @section('content')
 <div class="container px-5 mt-5">
