@@ -17,11 +17,11 @@ use Illuminate\Http\Client\Request;
 
 // Example
 // Route::view('/show', 'posts.show');
-// Route::get('posts/{post:slug}', 'PostController@show')->name('showpost');
-// Route::view('cobcss', 'cobcss');
+// Route::view('form', 'formpelayanan.formkk');
 
 // Public
 Route::get('/', 'adminController@index');
+Route::get('posts/{post:slug}', 'PostController@show')->name('showpost');
 
 // Error
 Route::get(

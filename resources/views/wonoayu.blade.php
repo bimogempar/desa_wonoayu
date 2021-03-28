@@ -1,4 +1,4 @@
-@extends('layouts.publicapp')
+@extends('layouts.cobalayout')
 
 @section('content')
         {{-- Carousel --}}
@@ -396,12 +396,12 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                     <div class="portfolio-wrap">
-                    <img src="frontend/img/portfolio/app1.jpg" class="img-fluid" alt="">
+                    <img src="{{asset('/img/img/portfolio/app1.jpg')}}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="#">App 1</a></h4>
                         <p>App</p>
                         <div>
-                        <a href="frontend/img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                        <a href="{{('/img/img/portfolio/app1.jpg')}}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
                         <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                         </div>
                     </div>
@@ -410,12 +410,12 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
                     <div class="portfolio-wrap">
-                    <img src="frontend/img/portfolio/web3.jpg" class="img-fluid" alt="">
+                    <img src="{{asset('/img/img/portfolio/web3.jpg')}}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="#">Web 3</a></h4>
                         <p>Web</p>
                         <div>
-                        <a href="frontend/img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+                        <a href="{{('/img/img/portfolio/web3.jpg')}}" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
                         <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                         </div>
                     </div>
@@ -424,12 +424,12 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
                     <div class="portfolio-wrap">
-                    <img src="frontend/img/portfolio/app2.jpg" class="img-fluid" alt="">
+                    <img src="{{('/img/img/portfolio/app2.jpg')}}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="#">App 2</a></h4>
                         <p>App</p>
                         <div>
-                        <a href="frontend/img/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                        <a href="{{('/img/img/portfolio/app2.jpg')}}" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
                         <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                         </div>
                     </div>
@@ -438,12 +438,12 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                     <div class="portfolio-wrap">
-                    <img src="frontend/img/portfolio/card2.jpg" class="img-fluid" alt="">
+                    <img src="{{('/img/img/portfolio/card2.jpg')}}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="#">Card 2</a></h4>
                         <p>Card</p>
                         <div>
-                        <a href="frontend/img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+                        <a href="{{('/img/img/portfolio/card2.jpg')}}" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
                         <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                         </div>
                     </div>
@@ -452,12 +452,12 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
                     <div class="portfolio-wrap">
-                    <img src="frontend/img/portfolio/web2.jpg" class="img-fluid" alt="">
+                    <img src="{{('/img/img/portfolio/web2.jpg')}}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="#">Web 2</a></h4>
                         <p>Web</p>
                         <div>
-                        <a href="frontend/img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+                        <a href="{{('/img/img/portfolio/web2.jpg')}}" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
                         <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                         </div>
                     </div>
@@ -466,12 +466,12 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
                     <div class="portfolio-wrap">
-                    <img src="frontend/img/portfolio/app3.jpg" class="img-fluid" alt="">
+                    <img src="{{('/img/img/portfolio/app3.jpg')}}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="#">App 3</a></h4>
                         <p>App</p>
                         <div>
-                        <a href="frontend/img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                        <a href="{{('/img/portfolio/app3.jpg')}}" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
                         <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                         </div>
                     </div>
@@ -480,12 +480,12 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                     <div class="portfolio-wrap">
-                    <img src="frontend/img/portfolio/card1.jpg" class="img-fluid" alt="">
+                    <img src="{{('/img/img/portfolio/card1.jpg')}}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="#">Card 1</a></h4>
                         <p>Card</p>
                         <div>
-                        <a href="frontend/img/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
+                        <a href="{{('/img/img/portfolio/card1.jpg')}}" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
                         <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                         </div>
                     </div>
@@ -494,12 +494,12 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
                     <div class="portfolio-wrap">
-                    <img src="frontend/img/portfolio/card3.jpg" class="img-fluid" alt="">
+                    <img src="{{('/img.img/portfolio/card3.jpg')}}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="#">Card 3</a></h4>
                         <p>Card</p>
                         <div>
-                        <a href="frontend/img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
+                        <a href="{{('/img/img/portfolio/card3.jpg')}}" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
                         <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                         </div>
                     </div>
@@ -508,12 +508,12 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
                     <div class="portfolio-wrap">
-                    <img src="frontend/img/portfolio/web1.jpg" class="img-fluid" alt="">
+                    <img src="{{('/img/img/portfolio/web1.jpg')}}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="#">Web 1</a></h4>
                         <p>Web</p>
                         <div>
-                        <a href="frontend/img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+                        <a href="{{('/img/img/portfolio/web1.jpg')}}" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
                         <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                         </div>
                     </div>
@@ -534,14 +534,14 @@
                 </header>
 
                 <div class="owl-carousel clients-carousel">
-                <img src="frontend/img/clients/client-1.png" alt="">
-                <img src="frontend/img/clients/client-2.png" alt="">
-                <img src="frontend/img/clients/client-3.png" alt="">
-                <img src="frontend/img/clients/client-4.png" alt="">
-                <img src="frontend/img/clients/client-5.png" alt="">
-                <img src="frontend/img/clients/client-6.png" alt="">
-                <img src="frontend/img/clients/client-7.png" alt="">
-                <img src="frontend/img/clients/client-8.png" alt="">
+                <img src="{{asset('/img/img/clients/client-1.png')}}" alt="">
+                <img src="{{asset('/img/img/clients/client-2.png')}}" alt="">
+                <img src="{{asset('/img/img/clients/client-3.png')}}" alt="">
+                <img src="{{asset('/img/img/clients/client-4.png')}}" alt="">
+                <img src="{{asset('/img/img/clients/client-5.png')}}" alt="">
+                <img src="{{asset('/img/img/clients/client-6.png')}}" alt="">
+                <img src="{{asset('/img/img/clients/client-7.png')}}" alt="">
+                <img src="{{asset('/img/img/clients/client-8.png')}}" alt="">
                 </div>
 
             </div>

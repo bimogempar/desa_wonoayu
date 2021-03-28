@@ -30,7 +30,7 @@ class PostController extends Controller
         $attr = request()->validate([
             'title' => 'required|min:3',
             'body' => 'required',
-            'thumbnail' => 'image|mimes:jpeg,png,jpg,svg|max:2048',
+            'thumbnail' => 'image|mimes:jpeg,png,jpg,svg',
         ]);
 
         $attr = $request->all();

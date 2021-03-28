@@ -1,7 +1,7 @@
-@extends('layouts.publicapp')
+@extends('layouts.cobalayout')
 
 @section('content')
-    <div class="container p-5">
+    <div class="container p-5 mt-5">
         @if ($post->thumbnail)
         <img style="object-position: center;" src="{{ $post->takeImage }}" class="card-img-top mb-5">
         @endif
