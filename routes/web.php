@@ -25,6 +25,14 @@ Route::get('/posts/allposts', 'adminController@allPost');
 Route::get('/galleries', 'adminController@gallery');
 Route::get('posts/{post:slug}', 'PostController@show')->name('showpost');
 
+Route::view('formktp', 'formpelayanan.formktp');
+Route::view('formkk', 'formpelayanan.formktp');
+Route::view('formaktakelahiran', 'formpelayanan.formaktakelahiran');
+Route::view('formaktakematian', 'formpelayanan.formaktakematian');
+Route::view('pelaporankematian', 'formpelayanan.pelaporankematian');
+Route::view('persyaratan', 'formpelayanan.persyaratan');
+Route::view('suratpernyataan', 'formpelayanan.suratpernyataan');
+
 // Error
 Route::get(
     '/logout',
