@@ -49,7 +49,7 @@
     <script src="{{asset('/lib/isotope/isotope.pkgd.min.js')}}"></script>
     <script src="{{asset('/lib/lightbox/js/lightbox.min.js')}}"></script>
     <!-- Contact Form JavaScript File -->
-    <script src="{{asset('contactform/contactform.js')}}"></script>
+    <script src="{{asset('js/contactform/contactform.js')}}"></script>
 
     <!-- Template Main Javascript File -->
     <script src="{{asset('/js/js/main.js')}}"></script>
