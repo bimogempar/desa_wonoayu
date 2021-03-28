@@ -8,7 +8,7 @@
                 <div class="carousel-item @if($loop->first) active @endif">
                 <a href="{{ $slider->link }}" target="_blank" rel="noopener noreferrer"><img src="{{ $slider->takeImage }}/{{ $slider->imageslider }}" class="d-block w-100" alt="..."></a>
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>{{ $slider->title }}</h5>
+                    <h3>{{ $slider->title }}</h3>
                     <p>{{ $slider->subtitle }}</p>
                 </div>
                 </div>
@@ -38,13 +38,13 @@
                 <div class="col-lg-7 col-md-6">
                     <div class="about-content">
                     <h2>Tentang Desa</h2>
-                    <h3>Sambutan Kepala Desa</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <p>Aut dolor id. Sint aliquam consequatur ex ex labore. Et quis qui dolor nulla dolores neque. Aspernatur consectetur omnis numquam quaerat. Sed fugiat nisi. Officiis veniam molestiae. Et vel ut quidem alias veritatis repudiandae ut fugit. Est ut eligendi aspernatur nulla voluptates veniam iusto vel quisquam. Fugit ut maxime incidunt accusantium totam repellendus eum error. Et repudiandae eum iste qui et ut ab alias.</p>
+                    <h3>Singkat tentang Wonoayu.</h3>
+                    <p>Wonoayu adalah sebuah desa di wilayah Kecamatan Wajak, Kabupaten Malang, Provinsi Jawa Timur. Desa ini terletak sekitar 37 km dari kabupaten Malang. Desa ini memiliki luas wilayah 254,6 ha dengan struktur tanah yang berbukit dan memiliki ketinggian tanah 630 Mdpl. Desa Wonoayu sudah berdiri sejak tahun 1913 . Berawal dari perpindahan 11 kepala keluarga dari kecamatan Poncokusumo, sampai akhirnya terbentuk menjadi sebuah desa baru.</p>
+                    <p>Desa yang berkependudukan 1551 jiwa ini memiliki 6 RT dan mayoritas masyarakatnya beragama islam. Sebagai wilayah yang terletak di bawah kaki Gunung Semeru, adapun suhu rata-rata yang ada yakni berkisar antara 22°-27 °C. Daerah sejuk dan subur menjadikannya wilayah yang memiliki potensi tinggi dalam hal sektor pertanian. Desa Wonoayu memiliki daerah yang cukup luas. Wilayah sebelah timur berbatasan dengan Desa Sumberputih, wilayah sebelah utara berbatasan dengan Desa Bambang, wilayah sebelah barat berbatasan dengan Desa Bringin dan wilayah sebelah selatan berbatasan dengan Desa Sumber Putih. Desa Wonoayu dapat dikatakan sebagai desa yang tergolong maju, hal tersebut terbukti dengan akses jalan menuju desa yang sudah beraspal dan tertata rapi. Juga beberapa dari warga desanya telah mandiri dalam hal memanfaatkan peluang usaha di sektor pertanian.</p>
                     <ul>
-                        <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                        <li><i class="ion-android-checkmark-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                        <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                        <li><i class="ion-android-checkmark-circle"></i>Luas desa 254,6 ha 630 mdpl</li>
+                        <li><i class="ion-android-checkmark-circle"></i>Memiliki 1551 jumlah jiwa dan 6 RT</li>
+                        <li><i class="ion-android-checkmark-circle"></i>Desa yang sejuh dan subur dan memiliki potensi tinggi dalam sektor pertanian</li>
                     </ul>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
 
                 <header class="section-header">
                 <h3>Statistik Desa</h3>
-                <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+                <p>Statistik data kependudukan Desa Wonoayu</p>
                 </header>
 
             </div>
@@ -98,7 +98,7 @@
             <div class="container">
                 <div class="section-header">
                 <h3>Struktur Desa</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                <p>Struktur Organisasi dan Tata Kerja Pemerintah Desa Wonoayu Kecamatan Wajak Kabupaten Malang Provinsi Jawa Timur</p>
                 </div>
 
                 <div class="row">
@@ -193,41 +193,20 @@
 
                     <div class="owl-carousel testimonials-carousel wow fadeInUp">
 
+                    @foreach ($posts as $post)
                     <div class="testimonial-item">
-                        <img src="http://via.placeholder.com/800x800" class="testimonial-img" alt="">
-                        <h3>Saul Goodman</h3>
+                        @if($post->thumbnail)
+                        <img src="{{ $post->takeImage }}" style="object-fit: cover; object-position: center; width: 100px; height: 100px" class="testimonial-img" alt="">
+                        @else
+                        <img src="https://www.labelprint.co.za/wp-content/uploads/2018/11/user-icon-image-placeholder-300-grey.jpg" style="object-fit: cover; object-position: center; width: 100px; height: 100px" class="testimonial-img" alt="">
+                        @endif
+                        <h3>{{ $post->title }}</h3>
                         <h4>Ceo &amp; Founder</h4>
                         <p>
                         Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
                         </p>
                     </div>
-
-                    <div class="testimonial-item">
-                        <img src="http://via.placeholder.com/800x800" class="testimonial-img" alt="">
-                        <h3>Sara Wilsson</h3>
-                        <h4>Designer</h4>
-                        <p>
-                        Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                        </p>
-                    </div>
-
-                    <div class="testimonial-item">
-                        <img src="http://via.placeholder.com/800x800" class="testimonial-img" alt="">
-                        <h3>Jena Karlis</h3>
-                        <h4>Store Owner</h4>
-                        <p>
-                        Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                        </p>
-                    </div>
-
-                    <div class="testimonial-item">
-                        <img src="http://via.placeholder.com/800x800" class="testimonial-img" alt="">
-                        <h3>Matt Brandon</h3>
-                        <h4>Freelancer</h4>
-                        <p>
-                        Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                        </p>
-                    </div>
+                    @endforeach
 
                     </div>
 
@@ -244,47 +223,64 @@
 
                 <header class="section-header">
                 <h3>Pelayanan</h3>
-                <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+                <p>Pelayanan yang diberikan oleh Pemerintah Desa kepada Masyaratak Desa Wonoayu.</p>
                 </header>
 
                 <div class="row d-flex justify-content-center">
 
                 <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
                     <div class="box">
-                    <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
-                    <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                    <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                    <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+                    <h4 class="title"><a href="formktp">Layanan Pengurusan Kartu Tanda Penduduk</a></h4>
+                    <p class="description">Layanan Ini Mencakup Pengajuan KTP Baru, KTP Hilang, dan Perubahan Data KTP</p>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
                     <div class="box">
-                    <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
-                    <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                    <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                    <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+                    <h4 class="title"><a href="formkk">Layanan Pendaftaran Kartu Keluarga</a></h4>
+                    <p class="description">Layanan Ini Mencakup Pendaftaran Isian Kartu Keluarga (KK)</p>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
                     <div class="box">
                     <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
-                    <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                    <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                    <h4 class="title"><a href="formaktakelahiran">Layanan Pengurusan Akta Kelahiran</a></h4>
+                    <p class="description">Layanan Ini Mencakup Pendaftaran Akta Kelahiran</p>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
                     <div class="box">
-                    <div class="icon" style="background: #eafde7;"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
-                    <h4 class="title"><a href="">Magni Dolores</a></h4>
-                    <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+                    <h4 class="title"><a href="formaktakematian">Layanan Pengurusan Akta Kematian</a></h4>
+                    <p class="description">Layanan Ini Mencakup Pendaftaran Akta Kematian</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                    <div class="box">
+                    <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+                    <h4 class="title"><a href="suratpernyataan">Layanan Pengurusan Surat Pernyataan Kematian</a></h4>
+                    <p class="description">Layanan Ini Mencakup Pengurusan Surat Pernyataan Kematian</p>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
                     <div class="box">
-                    <div class="icon" style="background: #e1eeff;"><i class="ion-ios-world-outline" style="color: #2282ff;"></i></div>
-                    <h4 class="title"><a href="">Nemo Enim</a></h4>
-                    <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                    <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+                    <h4 class="title"><a href="pelaporankematian">Layanan Pelaporan Kematian</a></h4>
+                    <p class="description">Layanan Ini Mencakup Pelaporan Kematian</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+                    <div class="box">
+                    <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+                    <h4 class="title"><a href="persyaratan">Persyaratan Pengurusan Dokumen Penting dan Pendirian Usaha</a></h4>
+                    <p class="description">Layanan Ini Memberi Info tentang Persyaratan Pengurusan Dokumen Penting dan Pendirian Usaha</p>
                     </div>
                 </div>
 
@@ -293,24 +289,24 @@
             </div>
         </section>
 
-        {{-- Empty Section --}}
+        {{-- Curhat Desa --}}
         <section id="call-to-action" class="wow fadeInUp">
             <div class="container">
                 <div class="row">
                 <div class="col-lg-9 text-center text-lg-left">
-                    <h3 class="cta-title">Call To Action</h3>
-                    <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3 class="cta-title">Curhat Desa</h3>
+                    <p class="cta-text">Wadah untuk menyampaikan kritik dan saran mengenai keluhan tentang Desa Wonoayu.</p>
                 </div>
                 <div class="col-lg-3 cta-btn-container text-center">
-                    <a class="cta-btn align-middle" href="#">Call To Action</a>
+                    <a class="cta-btn align-middle" href="#">Curhat Desa</a>
                 </div>
                 </div>
 
             </div>
         </section>
-
+{{--
         {{-- Empty Section 2 --}}
-        <section id="features">
+        {{-- <section id="features">
             <div class="container">
 
                 <div class="row feature-item">
@@ -349,15 +345,15 @@
                 </div>
 
             </div>
-        </section>
+        </section>  --}}
 
         {{-- Portal Berita --}}
         <section id="pricing" class="wow fadeInUp section-bg">
             <div class="container">
 
                 <header class="section-header">
-                <h3>Portal Berita</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                <a href="posts/allposts" class=""><h3>Portal Berita</h3></a>
+                <p>Portal berita yang berisikan informasi-informasi terbaru mengenai Desa Wonoayu.</p>
                 </header>
 
                 <div class="row flex-items-xs-middle flex-items-xs-center">
@@ -378,9 +374,11 @@
                     @endforeach
                 </div>
 
-                <div class="row mt-5 d-flex justify-content-center">
-                    {{ $posts->links() }}
-                </div>
+                {{-- <div class="row mt-5 d-flex justify-content-center">
+                    <div class="card pb-0">
+                    <a href="#" class="btn">Semua Berita</a>
+                    </div>
+                </div> --}}
             </div>
         </section>
 
@@ -389,7 +387,8 @@
             <div class="container">
 
                 <header class="section-header">
-                <h3 class="section-title">Galeri</h3>
+                <a href="/galleries" class=""><h3 class="section-title">Galeri</h3></a>
+                <p>Galeri kegiatan kegiatan Desa Wonoayu.</p>
                 </header>
 
                 <div class="row portfolio-container">
@@ -411,10 +410,15 @@
                 </div>
 
             </div>
+            {{-- <div class="row mt-5 d-flex justify-content-center">
+                <div class="card pb-0">
+                <a href="#" class="btn">Semua Foto</a>
+                </div>
+            </div> --}}
         </section>
 
         {{-- Didukung Oleh --}}
-        <section id="clients" class="wow fadeInUp">
+        {{-- <section id="clients" class="wow fadeInUp">
             <div class="container">
 
                 <header class="section-header">
@@ -422,25 +426,19 @@
                 </header>
 
                 <div class="owl-carousel clients-carousel">
-                <img src="{{asset('/img/img/clients/client-1.png')}}" alt="">
-                <img src="{{asset('/img/img/clients/client-2.png')}}" alt="">
-                <img src="{{asset('/img/img/clients/client-3.png')}}" alt="">
-                <img src="{{asset('/img/img/clients/client-4.png')}}" alt="">
-                <img src="{{asset('/img/img/clients/client-5.png')}}" alt="">
-                <img src="{{asset('/img/img/clients/client-6.png')}}" alt="">
-                <img src="{{asset('/img/img/clients/client-7.png')}}" alt="">
-                <img src="{{asset('/img/img/clients/client-8.png')}}" alt="">
+                <img src="{{asset('logokabmalang.svg')}}" alt="">
+                <img src="{{asset('logoumm.png')}}" alt="">
                 </div>
 
             </div>
-        </section>
+        </section> --}}
 
         {{-- Tanya Jawab --}}
         <section id="faq">
             <div class="container">
                 <header class="section-header">
                 <h3>Tanya Jawab</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                <p>Pertanyaan yang sering diajukan masyarakat kepada Pemerintah Desa, termasuk Pelayanan.</p>
                 </header>
 
                 <ul id="faq-list" class="wow fadeInUp">

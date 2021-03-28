@@ -21,6 +21,8 @@ use Illuminate\Http\Client\Request;
 
 // Public
 Route::get('/', 'adminController@index');
+Route::get('/posts/allposts', 'adminController@allPost');
+Route::get('/galleries', 'adminController@gallery');
 Route::get('posts/{post:slug}', 'PostController@show')->name('showpost');
 
 // Error

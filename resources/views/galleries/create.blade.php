@@ -14,6 +14,11 @@
                             <label for="title">Judul</label>
                             <input type="text" name="title" id="title" class="form-control">
                         </div>
+                        @error('title')
+                        <div class="text-danger mt-2">
+                            Judul harus diisi
+                        </div>
+                        @enderror
 
                         <div class="form-group">
                             <label for="">Foto</label><br>

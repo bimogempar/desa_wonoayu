@@ -23,7 +23,21 @@ class adminController extends Controller
             'posts' => Post::latest()->paginate(3),
             'sliders' => Slider::where('status', 1)->get(),
             'statistics' => Statistic::all(),
-            'galleries' => Gallery::latest()->paginate(10),
+            'galleries' => Gallery::latest()->paginate(5),
+        ]);
+    }
+
+    public function allPost()
+    {
+        return view('posts.allposts', [
+            'posts' => Post::latest()->paginate(9),
+        ]);
+    }
+
+    public function gallery()
+    {
+        return view('galleries.galleries', [
+            'galleries' => Gallery::latest()->paginate(9),
         ]);
     }
 
