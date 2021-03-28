@@ -11,6 +11,7 @@
                 <a href="posts"><button class="btn btn-warning" type="button">Berita</button></a>
                 <a href="sliders"><button class="btn btn-warning" type="button">Slider</button></a>
                 <a href="statistics"><button class="btn btn-warning" type="button">Statistik</button></a>
+                <a href="galleries"><button class="btn btn-warning" type="button">Gallery</button></a>
                 <a href="print"><button class="btn btn-warning" type="button">Print</button></a>
             </div>
         </div>

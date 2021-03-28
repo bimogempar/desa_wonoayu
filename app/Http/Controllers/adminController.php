@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Gallery;
 use App\Post;
 use App\Slider;
 use App\Statistic;
@@ -22,6 +23,7 @@ class adminController extends Controller
             'posts' => Post::latest()->paginate(3),
             'sliders' => Slider::where('status', 1)->get(),
             'statistics' => Statistic::all(),
+            'galleries' => Gallery::latest()->paginate(10),
         ]);
     }
 

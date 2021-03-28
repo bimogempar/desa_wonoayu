@@ -59,7 +59,7 @@ Route::middleware('auth')->group(function () {
     //update slider
     Route::get('admin/sliders/{slider:id}/edit', 'sliderController@edit');
     Route::patch('admin/sliders/{slider:id}/update', 'sliderController@update');
-    //delete post
+    //delete slider
     Route::delete('admin/sliders/{slider:id}/delete', 'sliderController@destroy');
 
     // statistic
@@ -67,6 +67,13 @@ Route::middleware('auth')->group(function () {
     // Edit Statistic
     Route::get('admin/statistics/{statistic:id}/edit', 'statisticController@edit')->name('edit.statistic');
     Route::patch('admin/statistics/{statistic:id}/update', 'statisticController@update');
+
+    //slider
+    Route::get('admin/galleries', 'GalleryController@index');
+    Route::get('admin/galleries/create', 'GalleryController@create')->name('create.gallery');
+    Route::post('admin/galleries/store', 'GalleryController@store');
+    //delete slider
+    Route::delete('admin/galleries/{gallery:id}/delete', 'GalleryController@destroy');
 });
 
 
