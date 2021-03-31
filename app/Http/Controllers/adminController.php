@@ -6,6 +6,7 @@ use App\Gallery;
 use App\Post;
 use App\Slider;
 use App\Statistic;
+use App\PerangkatDesa;
 use Dotenv\Result\Success;
 use Illuminate\Http\Request;
 use phpDocumentor\Reflection\Types\Boolean;
@@ -21,8 +22,9 @@ class adminController extends Controller
     {
         return view('wonoayu', [
             'posts' => Post::latest()->paginate(3),
-            'sliders' => Slider::where('status', 1)->get(),
+            'sliders' => Slider::latest(),
             'statistics' => Statistic::all(),
+            'perangkatdesas' => PerangkatDesa::all(),
             'galleries' => Gallery::latest()->paginate(5),
         ]);
     }

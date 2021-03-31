@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
-                <div class="card-header">Berita Baru</div>
+                <div class="card-header">Update Berita</div>
                 <div class="card-body">
                     <form action="edit" method="post" enctype="multipart/form-data">
                         @method('patch')
@@ -23,7 +23,8 @@
 
                         <div action="form-group">
                             <label for="title">Judul</label>
-                            <input value="{{ old('title') ?? $post->title }}" type="text" name="title" id="title" class="form-control">
+                            <input value="{{ old('title') ?? $post->title }}" type="text" name="title" id="title"
+                                class="form-control">
                         </div>
                         @error('title')
                         <div class="text-danger mt-2">
@@ -52,4 +53,3 @@
     </div>
 </div>
 @endsection
-

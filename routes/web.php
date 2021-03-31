@@ -84,6 +84,16 @@ Route::middleware('auth')->group(function () {
     Route::post('admin/galleries/store', 'GalleryController@store');
     //delete slider
     Route::delete('admin/galleries/{gallery:id}/delete', 'GalleryController@destroy');
+
+    //perangkat desa
+    Route::get('admin/perangkatdesa', 'PerangkatDesaController@index')->name('admin.perangkatdesa');
+    Route::get('admin/perangkatdesa/create', 'PerangkatDesaController@create')->name('create.perangkatdesa');
+    Route::post('admin/perangkatdesa/store', 'PerangkatDesaController@store');
+    //update perangkat desa
+    Route::get('admin/perangkatdesa/{perangkatdesa:id}/edit', 'PerangkatDesaController@edit')->name('edit.perangkatdesa');
+    Route::patch('admin/perangkatdesa/{perangkatdesa:id}/edit', 'PerangkatDesaController@update');
+    //delete perangkat desa
+    Route::delete('admin/perangkatdesa/{perangkatdesa:id}/delete', 'PerangkatDesaController@destroy');
 });
 
 

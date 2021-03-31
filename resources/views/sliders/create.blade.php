@@ -36,13 +36,13 @@
                         </div>
                         @enderror
 
-                        <div action="form-group">
+                        {{-- <div action="form-group">
                             <label for="title">Status</label>
                             <select name="status" id="status">
                                 <option value="1">Aktif</option>
                                 <option value="0">Tidak Aktif</option>
                             </select>
-                        </div>
+                        </div> --}}
 
                         <div class="py-3">
                             <button type="submit" class="btn btn-primary">Publish</button>

@@ -51,7 +51,7 @@
         <input type="text" class="form-control" id="inputPassword4">
         </div>
     </div>
-    <div class="form-row d-flex justify-content-center mt-3">
+    <div class="form-row d-flex justify-content-center mt-3 mb-4">
         <button type="submit" class="btn btn-primary">SUBMIT</button>
     </div>
     </form>
