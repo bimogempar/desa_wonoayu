@@ -15,7 +15,7 @@
         <a href="statistics"><button class="btn btn-warning" type="button">Statistik</button></a>
         <a href="perangkatdesa"><button class="btn btn-warning" type="button">Perangkat Desa</button></a>
         <a href="galleries"><button class="btn btn-warning" type="button">Gallery</button></a>
-        <a href="prints"><button class="btn btn-warning" type="button">Print</button></a>
+        <a href="/"><button class="btn btn-warning" type="button">Print</button></a>
     </div>
 </div>
 

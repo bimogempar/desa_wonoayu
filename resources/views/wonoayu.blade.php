@@ -151,7 +151,7 @@
 </section>
 
 {{-- Kata Masyarakat --}}
-<section id="testimonials">
+{{-- <section id="testimonials">
     <div class="container">
 
         <header class="section-header">
@@ -167,30 +167,29 @@
                     <div class="testimonial-item">
                         @if($post->thumbnail)
                         <img src="{{ $post->takeImage }}"
-                            style="object-fit: cover; object-position: center; width: 100px; height: 100px"
-                            class="testimonial-img" alt="">
-                        @else
-                        <img src="{{asset('/img/userprofileplaceholder.jpg')}}"
-                            style="object-fit: cover; object-position: center; width: 100px; height: 100px"
-                            class="testimonial-img" alt="">
-                        @endif
-                        <h3>{{ $post->title }}</h3>
-                        <h4>Ceo &amp; Founder</h4>
-                        <p>
-                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
-                            Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                        </p>
-                    </div>
-                    @endforeach
+style="object-fit: cover; object-position: center; width: 100px; height: 100px"
+class="testimonial-img" alt="">
+@else
+<img src="{{asset('/img/userprofileplaceholder.jpg')}}"
+    style="object-fit: cover; object-position: center; width: 100px; height: 100px" class="testimonial-img" alt="">
+@endif
+<h3>{{ $post->title }}</h3>
+<h4>Ceo &amp; Founder</h4>
+<p>
+    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
+    Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+</p>
+</div>
+@endforeach
 
-                </div>
+</div>
 
-            </div>
-        </div>
+</div>
+</div>
 
 
-    </div>
-</section>
+</div>
+</section> --}}
 
 {{-- Pelayanan --}}
 <section id="services" class="section-bg">

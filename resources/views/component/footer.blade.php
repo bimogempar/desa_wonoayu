@@ -5,7 +5,7 @@
 
             <div class="row">
 
-                <div class="col-lg-8">
+                <div class="col-lg-12">
 
                     <div class="row">
 
@@ -31,7 +31,7 @@
 
                         </div>
 
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <div class="footer-links">
                                 <h4>Links</h4>
                                 <ul>
@@ -49,7 +49,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-4">
+                        <div class="col-sm  ">
                             <div class="footer-links">
                                 <h4>Kontak Desa</h4>
                                 <p>
@@ -72,7 +72,7 @@
 
                 </div>
 
-                <div class="col-lg-4">
+                {{-- <div class="col-lg-4">
 
                     <div class="form">
 
@@ -109,7 +109,7 @@
                         </form>
                     </div>
 
-                </div>
+                </div> --}}
 
 
 
